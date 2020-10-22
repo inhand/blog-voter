@@ -1,0 +1,12 @@
+@import './src/sass/variables.scss';
+@import './src/sass/typography';
+
+.tagger-wrapper {
+  padding-top: 1rem;
+}
+
+span {
+  @extend .text-normal;
+  color: $tag-text;
+  padding-right: 1rem;
+}

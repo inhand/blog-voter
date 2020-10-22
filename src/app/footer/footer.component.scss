@@ -1,0 +1,17 @@
+@import './src/sass/variables.scss';
+@import './src/sass/typography';
+@import './src/sass/grid';
+
+footer {
+  background-color: $footer-background;
+  color: $alternate-body-text;
+  @extend .grid-layout;
+  grid-template-areas:
+        "....... footer-text";
+  padding: 0.6rem;
+}
+
+.footer-text {
+  @extend .text-normal;
+  grid-area: footer-text;
+}

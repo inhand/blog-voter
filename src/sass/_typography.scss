@@ -1,0 +1,27 @@
+.font-family-base {
+  font-family: Arial, sans-serif;
+}
+
+.text-xl-bold {
+  @extend .font-family-base;
+  font-size: 72pt;
+  font-weight: bold;
+}
+
+.text-l-bold {
+  @extend .font-family-base;
+  font-size: 60pt;
+  font-weight: bold;
+}
+
+.text-bold-italic {
+  @extend .font-family-base;
+  font-size: 16pt;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.text-normal {
+  @extend .font-family-base;
+  font-size: 14pt;
+}

@@ -1,0 +1,54 @@
+@import './src/sass/variables.scss';
+@import './src/sass/typography';
+@import './src/sass/grid';
+
+.blog-entry {
+  background-color: $base-background-colour;
+}
+
+.even-row {
+  background-color: $base-background-colour;
+  color: $body-text;
+}
+
+.odd-row {
+  background-color: $alternate-background-colour;
+  color: $alternate-body-text;
+}
+
+.blog-wrapper {
+  @extend .grid-layout;
+  grid-template-areas:
+        "....... heading"
+        "voter content";
+  row-gap: 0.5rem;
+}
+
+.heading {
+  grid-area: heading;
+  & > h1 {
+    @extend .text-bold-italic;
+  }
+}
+
+.voter {
+  grid-area: voter;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.content {
+  grid-area: content;
+  margin-bottom: 1rem;
+  & > p {
+    @extend .text-normal;
+    margin: 0;
+    padding-right: 3.5rem;
+  }
+  & > p:nth-child(even) {
+    padding-top: 1rem;
+  }
+}
+
+

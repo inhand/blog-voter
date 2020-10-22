@@ -1,0 +1,3 @@
+<app-blog-entry *ngFor="let blog of blogs; let count = index" [blog]="blog"
+                [rowType]="(count%2)?rowType.ODD:rowType.EVEN"></app-blog-entry>
+

@@ -1,0 +1,15 @@
+<div class="blog-entry even-row" [ngClass]="applyRowTypeClasses()">
+
+  <div class="blog-wrapper">
+    <div class="heading">
+      <h1>{{blog.header}}</h1>
+    </div>
+    <app-voter class="voter" [rowType]="rowType" [blog]="blog"></app-voter>
+    <div class="content">
+      <p>{{blog.content1}}</p>
+      <p>{{blog.content2}}</p>
+      <app-tagger></app-tagger>
+    </div>
+  </div>
+</div>
+
