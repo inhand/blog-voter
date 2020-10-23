@@ -16,7 +16,7 @@ img {
   width: 50px;
 }
 
-span {
+.vote-count {
   @extend .text-bold-italic;
   width: 25px;
   display: flex;

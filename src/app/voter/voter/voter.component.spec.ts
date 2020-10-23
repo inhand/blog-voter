@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { VoterComponent } from './voter.component';
 import { RowType } from '../../blog/models/blog.model';
+import { By } from '@angular/platform-browser';
 
 describe('VoterComponent', () => {
   let component: VoterComponent;
@@ -47,4 +48,13 @@ describe('VoterComponent', () => {
     component.setThumbImages();
     expect(component.downImagePath).toEqual('assets/images/thumb-down-dark.png');
   });
+
+  it('should display correct vote count', () => {
+    component.blog = {id: 'blogtest', vote: 3, header: '', content1: '', content2: ''};
+    fixture.detectChanges();
+    const el = fixture.debugElement.query(By.css('.vote-count'));
+    const spanEl = el.nativeElement;
+    expect(spanEl.innerHTML).toContain(3);
+  });
+
 });
